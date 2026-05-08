@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard | Love Meter</title>
+  <link rel="stylesheet" href="/src/css/style.css">
+</head>
+<body class="admin-body">
+  <div id="particles-js"></div>
+  <div class="container">
+    
+    <!-- Login View -->
+    <div class="glass-card login-card" id="login-view">
+      <h2 class="title">Admin Login</h2>
+      <form id="login-form">
+        <div class="input-group">
+          <input type="text" id="username" placeholder="Username" required>
+        </div>
+        <div class="input-group">
+          <input type="password" id="password" placeholder="Password" required>
+        </div>
+        <p id="login-error" class="error-text hidden">Invalid credentials</p>
+        <button type="submit" class="btn-check">Login</button>
+      </form>
+    </div>
+
+    <!-- Dashboard View -->
+    <div class="glass-card dashboard-card hidden" id="dashboard-view">
+      <div class="dashboard-header">
+        <h2 class="title">Love Results</h2>
+        <button id="logout-btn" class="btn-reset">Logout</button>
+      </div>
+      
+      <div class="table-container">
+        <table id="results-table">
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Boy Name</th>
+              <th>Girl Name</th>
+              <th>Score</th>
+              <th>Message</th>
+            </tr>
+          </thead>
+          <tbody id="results-body">
+            <!-- Data injected here via JS -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </div>
+
+  <script type="module" src="/src/js/particles.js"></script>
+  <script type="module" src="/src/js/admin.js"></script>
+</body>
+</html>
